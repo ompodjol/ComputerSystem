@@ -1,24 +1,18 @@
-#include<stdio.h>
-#include "function_ave.c"
-
-int function_sum(int x, int y);
-
-int a=5, b=10;
-
-int main() {
-	int sum = function_sum(a,b);
-
-	printf ("The sum is %i\n", sum);
-	
-	int ave = function_ave(a,b);
-
-	printf("The average is %i\n", ave);
-
-	return 0;
-}
-
-int function_sum(int x, int y) {
-	int sum = x + y;
-
-	return sum;
-}
+#include<stdio.h> 
+  
+int main(int argc,char* argv[]) 
+{ 
+    int counter; 
+    printf("Program Name Is: %s",argv[0]); 
+    if(argc==1) 
+        printf("\nNo Extra Command Line Argument Passed Other Than Program Name"); 
+    if(argc>=2) 
+    { 
+        printf("\nNumber Of Arguments Passed: %d",argc); 
+        printf("\n----Following Are The Command Line Arguments Passed----"); 
+        for(counter=0;counter<argc;counter++) 
+            printf("\nargv[%d]: %s",counter,argv[counter]); 
+    } 
+    printf("\n");
+    return 0; 
+} 

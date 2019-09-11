@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include "function_ave.c"
+#include "function_area.c"
+
+int area_c(int radius);
+
+int function_sum(int x, int y);
+
+int a=5, b=10;
+
+int main() {
+	int sum = function_sum(a,b);
+
+	printf ("The sum is %i\n", sum);
+	
+	int ave = function_ave(a,b);
+
+	printf("The average is %i\n", ave);
+
+	area_c(10);
+
+	return 0;
+}
+
+int function_sum(int x, int y) {
+	int sum = x + y;
+
+	return sum;
+}
+
+int area_c(int radius) {
+	int a_c = area_circle(radius);
+	printf("Area of Circle with radius of %i is %i\n ", radius, a_c);
+
+	return 0;
+}
